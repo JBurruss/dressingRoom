@@ -1,5 +1,5 @@
-CREATE DATABASE dressingRoom;
-USE dressingRoom;
+CREATE DATABASE sequelize_passport;
+USE sequelize_passport;
 
 CREATE TABLE `users` (
   `id` Int( 11 ) AUTO_INCREMENT NOT NULL,
