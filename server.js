@@ -4,6 +4,7 @@ var passport = require('passport');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
+var exphbs = require('express-handlebars')
 
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -45,3 +46,10 @@ models.sequelize.sync().then(function() {
     console.log(err, "Something went wrong with the Database Update!")
  
 });
+
+//For Handlebars
+app.set('views', './app/views')
+app.engine('hbs', exphbs({
+    extname: '.hbs'
+}));
+app.set('view engine', '.hbs');
