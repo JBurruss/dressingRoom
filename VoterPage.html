@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Voter Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+   
+
+    <style>
+    div.jkcubeslideshow {
+        /* main container */
+        background: white;
+        display: block;
+        width: 300px;
+        /* default width of main container */
+        height: 375px;
+        /* default height of main container */
+        position: relative;
+        -webkit-perspective: 1000px;
+        /* Greater the value, less pronounced the 3D effect */
+        perspective: 1000px;
+        /* Greater the value, less pronounced the 3D effect */
+        ;
+    }
+
+    div.side1,
+    div.side2 {
+        /* two panels that make up cube effect */
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        backface-visibility: hidden;
+        /* hide backface of DIVs */
+        transition: all 1s ease-in-out;
+        /* CSS transition. Actual duration set by script */
+        ;
+    }
+
+    div.side1 img,
+    div.side2 img {
+        /* how should slideshow images be sized inside panels? */
+        width: 100%;
+        height: auto;
+    }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jkcubeslideshow.js">
+    /* =====================================
+     ** 3D Cube Slideshow- by JavaScript Kit (www.javascriptkit.com)
+     ** Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+    ===================================== */
+    </script>
+    <script>
+    var cubeshowvar1 // arbitrary but unique variable to store slideshow instance
+
+    jQuery(function($) {
+        cubeshowvar1 = new jkcubeslideshow({
+            id: 'cubeshow1',
+            dimensions: [300, 375],
+            images: [
+                ['food1.jpg'],
+                ['food2.jpg'],
+                ['food3.jpg'] //<-- no comma after last image
+            ] //<-- no comma after last setting
+        })
+    })
+    </script>
+</head>
+
+<body background="jugementBlue.jpg">
+<div id="VotePage">
+</div>
+    <div class="jkcubeslideshow" id="cubeshow1">
+    </div>
+    <br />
+    <a href="#" onClick="cubeshowvar1.rotatecube('back'); return false"> <img src="blueleft.gif" style="border:none" /> Back</a> <a href="#" onClick="cubeshowvar1.rotatecube('forward'); return false" style="margin-left:160px">Forward <img src="blueright.gif" style="border:none" /></a>
+    <div class="jkcubeslideshow" id="cubeshow1">
+        <style>
+        /* Style The Dropdown Button */
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        /* The container <div> - needed to position the dropdown content */
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        /* Dropdown Content (Hidden by Default) */
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        /* Links inside the dropdown */
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        /* Change color of dropdown links on hover */
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        /* Show the dropdown menu on hover */
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        </style>
+        <div class="dropdown">
+            <button class="dropbtn">Vote HERE!</button>
+            <div class="dropdown-content">
+                <a href="#">1. This Sucks! REMOVE IT!</a>
+                <a href="#">2. Tacky</a>
+                <a href="#">3. You kinda atempted</a>
+                <a href="#">4. Amature</a>
+                <a href="#">5. O.K</a>
+                <a href="#">6. Well done</a>
+                <a href="#">7. It looks kinda alright</a>
+                <a href="#">8. It almost look Great!</a>
+                <a href="#">9. Bravo</a>
+                <a href="#">10. The Best</a>
+                <a href="#">11. Viewtiful!</a>
+            </div>
+        </div>
+
+</body>
+
+</html>
