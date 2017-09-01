@@ -1,0 +1,3 @@
+Application: dressingRoom 
+Key: rdn9zpwymqke5s6amjbfney7rawkcgsj 
+Secret: 5CagTsweYaNW72xHHTR5bNWR5j3uauC2
